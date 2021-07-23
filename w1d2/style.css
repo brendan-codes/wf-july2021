@@ -1,0 +1,38 @@
+h3{
+    color: chartreuse;
+    font-style: italic;
+    background-color: black;
+}
+
+h1{
+    /* font-size: large; */
+    color: red;
+    background-color: blue;
+}
+
+.highlighted{
+    color: grey;
+    background-color: antiquewhite;
+}
+
+.monospaced{
+    /* font-weight: 900; */
+    font-family: monospace;
+}
+
+.header{
+    display: inline-block;
+    width: 50%;
+    border: 1px solid silver;
+    vertical-align: top;
+}
+
+.paragraphs{
+    display: inline-block;
+    width: 49%;
+}
+
+/* p{
+    display: inline;
+    width: 10%;
+} */
