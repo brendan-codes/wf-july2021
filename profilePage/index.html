@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="message" property="words">
+      <div class="header"><span>I am an Alert!</span><span onmouseover="hideAlert()">×</span></div>
+      <p>This is some arbitrary alert text!, don't worry about what it actually says!</p>
+      <button id="delete-button" onclick="hideAlert()">OK</button>
+    </div>
     <div class="nav">
         <h1 class="nav-title">Profile</h1>
         <ul class="nav-links">
@@ -16,15 +21,24 @@
             <li><a href="#">Find Connections</a></li>
         </ul>
         <div class="spacer"></div>
-        <button class="btn">Sign Out</button>
+        <button id="sign-out" class="btn" onclick="counter('#big-number')">Sign Out</button>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-2">
                 <div class="user-card">
                     <div class="card-header">
-                        <img src="https://placekeanu.com/254/254/y" alt="keanu" class="avatar">
+                        <img
+                            class="avatar"
+                            src="https://placekeanu.com/254/254/y"
+                            alt-src="https://placekeanu.com/254/254/"
+                            onclick="counter('#little-number')"
+                            onmouseenter="changeKeanu(this)"
+                            onmouseleave="changeKeanu(this)"
+                            alt="keanu"
+                        >
                     </div>
+                    <input type="text">
                     <div class="card-body">
                         <h1>Keanu Keanu</h1>
                         <p><img src="https://placekeanu.com/54/82/y" alt="also keanu" class="icon"> Info info | info info info | info</p>
@@ -52,7 +66,17 @@
             <div class="col">
                 <div class="card">
                     <div class="header">
-                        Education
+                       <span id="little-number" class="number">2 </span> Education
+                    </div>
+                    <div class="card-body">
+                        <h2>Dojo Dojo Dojo</h2>
+                        <p>Info info</p>
+                        <p>Black Belt of the Highest Order</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <span id="big-number" class="long-number">500</span> Education
                     </div>
                     <div class="card-body">
                         <h2>Dojo Dojo Dojo</h2>
@@ -63,5 +87,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
